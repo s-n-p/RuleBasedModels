@@ -1,0 +1,47 @@
+BioNetGen version 2.3.1
+Reading from file C:\Users\spenc\RuleBender-workspace\MM\MM.bngl (level 0)
+Read 9 parameters.
+Read 2 molecule types.
+Read 2 species.
+Read 4 observable(s).
+Read 3 reaction rule(s).
+ACTION: generate_network( MM )
+Iteration   0:     2 species      0 rxns  0.00e+000 CPU s
+Iteration   1:     3 species      3 rxns  0.00e+000 CPU s
+Iteration   2:     4 species      5 rxns  0.00e+000 CPU s
+Iteration   3:     4 species      5 rxns  0.00e+000 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   2:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   3:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Total   :     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Wrote network in net format to C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net.
+CPU TIME: generate_network 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net.
+Wrote network in net format to C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net.
+Running run_network on LAPTOP-8T52TM9O
+full command: C:\Users\spenc\Documents\RuleBender-2.2.1-win64\RuleBender-2.2.1-win64\BioNetGen-2.3\bin\run_network.exe -o C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM -p cvode -a 1e-008 -r 1e-008 --cdat 1 --fdat 0 -g C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net 20 1000
+[simulation PID is: 7476]
+run_network 3.0
+Read 9 parameters
+Read 4 species
+Read 4 group(s) from C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.net
+Read 0 function(s)
+Found species with index 0 at line 21: assuming this is the null species.
+Found species with index 0 at line 22: assuming this is the null species.
+Read 5 reaction(s)
+5 reaction(s) have nonzero rate
+Initialization took 0.03 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.cdat.
+Time course of groups written to file C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.gdat.
+Propagation took 9.30e-02 CPU seconds
+Program times:  0.12 CPU s 0.00 clock s 
+Updating species concentrations from C:\Users\spenc\RuleBender-workspace\MM\results\MM\2017-11-01_21-41-20\MM.cdat
+CPU TIME: simulate 0.00 s.
+Finished processing file C:\Users\spenc\RuleBender-workspace\MM\MM.bngl.
+CPU TIME: total 0.02 s.
+
+

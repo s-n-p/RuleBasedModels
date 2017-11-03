@@ -1,0 +1,8 @@
+BioNetGen:
+http://bionetgen.org/index.php/Main_Page
+
+Representing rule-based models in SBML: 
+http://co.mbine.org/specifications/sbml.level-3.version-1.multi.version-1.release-1.pdf
+
+Kappa is another example on how to represent rule-based models: 
+http://dev.executableknowledge.org/
