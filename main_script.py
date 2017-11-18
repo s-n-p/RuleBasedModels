@@ -29,12 +29,14 @@ def main (filename):
     print read_sbml.read_sbml(filename)
     print '\nprintMath: '
     printMath.main(filename)
-#    libsbml.
     reader = SBMLReader()
     doc = reader.readSBMLFromFile(filename)
     model = doc.getModel()   
     species = [model.getSpecies(i) for i in range(model.getNumSpecies())]
     for i in species:
+        print i
+    params = model.getListOfParameters()
+    for i in params:
         print i
 
 
