@@ -1,5 +1,5 @@
 from libsbml import *
-
+from echoSBML import *
 
 ## This is how you create an SBML document that uses the multi package.
 def createDocument():
@@ -29,10 +29,11 @@ def validateDocument(doc):
 
 
 if __name__ == '__main__':
-    print doc.getNumErrors()
+#    print doc.getNumErrors()
     
 
-    filename = "example.xml"
+    filename = "MM/MM_sbml.xml"
+    echo(filename, 'testfile')
     doc = readDocument(filename)
     model = doc.getModel()
     validateDocument(doc)
@@ -72,15 +73,7 @@ if __name__ == '__main__':
        print("          reactions: " + str(model.getNumReactions()) );
        print("             events: " + str(model.getNumEvents()) );
        print("\n");
-   
-   
-   
-   
-   
-   
-   
-   
-   
+ 
    
    
 	## Prints out raw xml

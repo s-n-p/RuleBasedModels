@@ -11,15 +11,15 @@ import os
 import os.path
 from libsbml import *
  
-def main (args):
+def read_sbml (filename):
    """Usage: readSBML filename
    """
 
-   if (len(args) != 2):
-       print("Usage: readSBML filename");
-       return 1;
+#   if (len(args) != 2):
+#       print("Usage: readSBML filename");
+#       return 1;
    
-   filename = args[1];
+#   filename = args[1];
    current = time.clock();
    document = readSBML(filename);
    
@@ -35,6 +35,6 @@ def main (args):
    document.printErrors();
    
    return errors;
-     
-if __name__ == '__main__':
-   main(sys.argv)  
+#     
+#if __name__ == '__main__':
+#   main(sys.argv)  
