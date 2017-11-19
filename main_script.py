@@ -15,7 +15,9 @@ import printMath
 
 
 
-
+def printList(listname):
+    for i in listname:
+        print i
 
 
 
@@ -31,13 +33,18 @@ def main (filename):
     printMath.main(filename)
     reader = SBMLReader()
     doc = reader.readSBMLFromFile(filename)
-    model = doc.getModel()   
+    model = doc.getModel() 
+    
     species = [model.getSpecies(i) for i in range(model.getNumSpecies())]
-    for i in species:
-        print i
+    printList(species)
+    
     params = model.getListOfParameters()
-    for i in params:
-        print i
+    printList(params)
+    
+    reactions = model.getListOfReactions()
+    printList(reactions)
+    for r in reactions:
+        print r, formulaToString(r.getKineticLaw().getMath())
 
 
 
