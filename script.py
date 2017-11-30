@@ -33,9 +33,7 @@ if __name__ == '__main__':
     
 
     filename = "MM/MM_sbml.xml"
-    echo(filename, 'testfile')
     doc = readDocument(filename)
-    model = doc.getModel()
     validateDocument(doc)
 
     level = doc.getLevel();
