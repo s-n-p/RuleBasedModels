@@ -52,4 +52,4 @@ generate_network({overwrite=>1})
 
 simulate({method=>"ode",t_end=>20000,n_steps=>1000})
 
-writeSBML()
+writeSBMLMulti({})
