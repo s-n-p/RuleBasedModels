@@ -107,18 +107,13 @@ def evaluate(diff_eqs, cons, delta, steps):
             else:
                 eq = '0.0'
             new_diff_eqs[i] = eq           
-#            print eval(eq)*delta
         cons = get_new_cons(new_diff_eqs, cons)
-#        cons[i].append(float(cons[i]) + float(float(eval(eq)) * delta))
     return cons
     
 def get_new_cons(diff_eqs, cons):
     cons_change = {}
     for i in diff_eqs:
-#        print 'species: ', i, '\n', diff_eqs[i]
-#        print float(eval(diff_eqs[i]))
         cons_change[i] = float(eval(diff_eqs[i]))
-#    print 'cons_change : ', cons_change
     for i in cons:
         cons[i].append(cons[i][-1] + cons_change[i])
     return cons
@@ -126,13 +121,10 @@ def get_new_cons(diff_eqs, cons):
 def show_plot(running_cons, species, steps, delta):
     legend = []
     for s in species:
-        print s
         plt.plot(range(steps+1), running_cons[s])
-#    plt.plot(range(steps+1), running_cons['S4'])
-#    plt.plot(range(steps+1), running_cons['S1'])
-#    plt.plot(range(steps+1), running_cons['S2'])
         legend.append(species[s])
     plt.legend(legend, loc='upper center', fontsize = 'xx-large')
+    plt.title(filename, fontsize='xx-large')
     plt.show()
     
 
@@ -206,16 +198,7 @@ def main (filename, delta, seconds):
 
 if __name__ == '__main__':   
     argArray = sys.argv
-#    filename = "MM/MM_sbml_sbmlmulti.xml"
-#    delta = 0.0005
-#    seconds = 2
     filename = argArray[1]
     delta = float(argArray[2])
     seconds = float(argArray[3])
     main(filename, delta, seconds)  
-
-
-
-
-
-
