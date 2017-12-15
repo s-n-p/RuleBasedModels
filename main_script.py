@@ -14,6 +14,7 @@ import printMath
 import read_sbml
 import matplotlib.pyplot as plt
 import sys
+import time
 
    
 def validate(document):
@@ -121,7 +122,7 @@ def get_new_cons(diff_eqs, cons):
 def show_plot(running_cons, species, steps, delta):
     legend = []
     for s in species:
-        plt.plot(range(steps+1), running_cons[s])
+        plt.plot(range(steps+1), running_cons[s], linewidth=3)
         legend.append(species[s])
     plt.legend(legend, loc='upper center', fontsize = 'xx-large')
     plt.title(filename, fontsize='xx-large')
@@ -147,16 +148,19 @@ def main (filename, delta, seconds):
         
         print '\nPARAMETERS: \n'
         params = params_dict(model.getListOfParameters(), model.getListOfInitialAssignments())
-        print params
+        for p in params:
+            print p, ' = ', params[p]
         
         print '\nREACTIONS: \n'
         reactants, products, formulas = get_reactants_products(model.getListOfReactions())
-#        print formulas
         diff_eqs = get_dSpecies(species, reactants, products, formulas)
         diff_eqs = put_params_in_DE(diff_eqs, params)
+        for s in reactants:
+            print s
         
         running_cons = evaluate(diff_eqs, cons, delta, steps)
         
+        time.sleep(1)
         show_plot(running_cons, species, steps, delta)
 
 
