@@ -14,15 +14,9 @@ from libsbml import *
 def read_sbml (filename):
    """Usage: readSBML filename
    """
-
-#   if (len(args) != 2):
-#       print("Usage: readSBML filename");
-#       return 1;
    
-#   filename = args[1];
    current = time.clock();
-   document = readSBML(filename);
-   
+   document = readSBML(filename);  
    errors = document.getNumErrors();
    
    print;
