@@ -161,11 +161,7 @@ def main (filename, delta, seconds):
         running_cons = evaluate(diff_eqs, cons, delta, steps)
         
         time.sleep(1)
-        show_plot(running_cons, species, steps, delta)
-
-
-
-       
+        show_plot(running_cons, species, steps, delta)      
             
     #    comp = model.getListOfCompartments()
     #    print comp
